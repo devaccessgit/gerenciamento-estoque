@@ -131,12 +131,26 @@ body {
     pointer-events: none;
   }
   
-  @media (max-width: 600px) {
-    form, .botoes-export {
-      flex-direction: column;
+  /* =============================
+   Ajustes para responsividade
+   ============================= */
+@media (max-width: 768px) {
+    /* Faz a tabela scrollar horizontalmente */
+    .table-responsive {
+      overflow-x: auto;
     }
   
-    table, thead, tbody, th, td, tr {
-      font-size: 30px;
+    /* Permite quebra de texto nas células */
+    .table-responsive table th,
+    .table-responsive table td {
+      white-space: normal;        /* não manter tudo em uma linha só */
+      word-break: break-word;     /* quebra palavras longas */
+      padding: 6px;               /* menos padding para caber mais */
+      font-size: 14px;            /* um pouco menor para caber mais */
+    }
+  
+    /* No formulário, garante inputs full-width */
+    form#product-form .form-control {
+      width: 100%;
     }
   }

@@ -1,3 +1,23 @@
+
+// placeholder para data em mobile
+const dataInput = document.getElementById('dataEntrada');
+if (dataInput) {
+  // começa como texto para exibir placeholder
+  dataInput.type = 'text';
+  dataInput.placeholder = 'DD/MM/AAAA';
+
+  dataInput.addEventListener('focus', () => {
+    dataInput.type = 'date';      // ao focar, abre seletor de data
+  });
+
+  dataInput.addEventListener('blur', () => {
+    // ao sair, se vazio, volta a text para mostrar placeholder
+    if (!dataInput.value) {
+      dataInput.type = 'text';
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("product-form");
     const lista = document.getElementById("product-list");
