@@ -1,0 +1,142 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  form input,
+  form button {
+    padding: 20px;
+    font-size: 16px;
+  }
+  
+  form input {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  form button {
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  form button:hover {
+    background: #059669;
+  }
+  
+  #filtro {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .botoes-export {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .botoes-export button {
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .botoes-export button:hover {
+    background: #2563eb;
+  }
+  
+  .tabela-wrapper {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  thead {
+    background-color: #f9fafb;
+  }
+  
+  th, td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  tfoot td {
+    font-weight: bold;
+    background: #f9fafb;
+  }
+  
+  button.edit,
+  button.delete {
+    padding: 3px 6px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button.edit {
+    background-color: #f1f50b;
+    color: rgb(10, 10, 10);
+  }
+  
+  button.delete {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  button i {
+    pointer-events: none;
+  }
+  
+  @media (max-width: 600px) {
+    form, .botoes-export {
+      flex-direction: column;
+    }
+  
+    table, thead, tbody, th, td, tr {
+      font-size: 30px;
+    }
+  }
